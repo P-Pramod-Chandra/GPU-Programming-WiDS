@@ -28,43 +28,41 @@ This week builds your mental model so everything later (memory, performance, ker
 
 ## **Required Resources**
 
-### **1. NVIDIA CUDA Programming Guide (Conceptual Introduction)**
+### **1. GPU Architecture Fundamentals**
 
-Read: **Chapter 1 — Introduction**
-[https://docs.nvidia.com/cuda/cuda-programming-guide/](https://docs.nvidia.com/cuda/cuda-programming-guide/)
+**UC Berkeley CS61C — GPU Architecture Lecture** (James Percy)  
+[https://www.youtube.com/watch?v=xdcW52tEPfE](https://www.youtube.com/watch?v=xdcW52tEPfE)  
+**Focus**: Why CPUs hit a wall, power/memory constraints, throughput vs latency philosophy
 
-Focus on:
-
-* What GPUs are optimized for
-* Parallel execution model
-* Overview of CUDA threads/blocks/grids
-
-
-
-### **2. UC Berkeley CS61C — Guest Lecture on GPUs by James Percy (Apple)**
-
-Video:
-[https://www.youtube.com/watch?v=xdcW52tEPfE](https://www.youtube.com/watch?v=xdcW52tEPfE)
-
-This gives the “physics layer” of performance:
-
-* Why CPUs stopped getting faster
-* Why GPUs thrive on massive parallelism
-* Memory bottlenecks and throughput considerations
+**NVIDIA CUDA Programming Guide — Chapter 1**  
+[https://docs.nvidia.com/cuda/cuda-c-programming-guide/](https://docs.nvidia.com/cuda/cuda-c-programming-guide/)  
+Read: Sections 1.1–1.3  
+**Focus**: SIMT execution model, thread/block/grid hierarchy, host vs device
 
 
+### **2. GPU in Practice**
 
-### **3. Stanford CS231n — Hardware/Software Interface (Lecture 15)**
+**Stanford CS149 — GPU Architecture & Programming Model** (Kayvon Fatahalian)  
+[https://gfxcourses.stanford.edu/cs149/fall24/lecture/gpuarch/](https://gfxcourses.stanford.edu/cs149/fall24/lecture/gpuarch/)  
+Video: [https://www.youtube.com/watch?v=gNyEHuuFdPQ](https://www.youtube.com/watch?v=gNyEHuuFdPQ)  
+**Focus**: Warps, SMs, memory hierarchy basics, what makes code "GPU-friendly"
 
-Slides & Video:
-[https://www.youtube.com/watch?v=WGf1f2HbJpE](https://www.youtube.com/watch?v=eZdOkDtYMoo)
-
-Focus on:
-
-* GPU in the modern AI stack
-* How frameworks like PyTorch map operations to hardware
+**Mark Harris — "An Even Easier Introduction to CUDA"**  
+[https://developer.nvidia.com/blog/even-easier-introduction-cuda/](https://developer.nvidia.com/blog/even-easier-introduction-cuda/)  
+Read: Full post (15 mins)  
+**Focus**: First complete CUDA example walkthrough (you don't need to code yet)
 
 
+## **Supplementary Resources** 
+
+**For ML Practitioners:**
+- PyTorch CUDA Semantics: [https://pytorch.org/docs/stable/notes/cuda.html](https://pytorch.org/docs/stable/notes/cuda.html) (10 min skim — understand `.cuda()` and `.to(device)`)
+
+**For Systems/HPC Folks:**
+- CUDA Refresher (Memory Hierarchy): [https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/)
+
+**For Visual Thinkers:**
+- GPU Gems Chapter 39 (Parallel Prefix Sum): [https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-39-parallel-prefix-sum-scan-cuda](https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-39-parallel-prefix-sum-scan-cuda) — See how algorithms change for GPUs
 
 ## **Week 1 Assignment (Summary)**
 
